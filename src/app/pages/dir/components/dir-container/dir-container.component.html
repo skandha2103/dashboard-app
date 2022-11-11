@@ -1,0 +1,41 @@
+<div class="root-container" style="width: 50%; height: 50vh; margin-top: 100px;">
+  <div class="parent-container" style="height: 20vh; width: 100%">
+    <div>Pick a color</div>
+    <div>
+      <input
+        type="radio"
+        class="form-check-input"
+        name="colors"
+        (click)="color = 'green'"
+      />Green
+    </div>
+    <div>
+      <input
+        type="radio"
+        class="form-check-input"
+        name="colors"
+        (click)="color = 'yellow'"
+      />Yellow
+    </div>
+    <div>
+      <input
+        type="radio"
+        class="form-check-input"
+        name="colors"
+        (click)="color = 'cyan'"
+      />cyan
+    </div>
+
+    <div style="margin-top:10px">
+      <p [appHighlightColor]="color">Highlight me</p>
+      <p [appHighlightColor]="color" defaultColor="violet">Highlight me too!</p>
+    </div>
+  </div>
+
+  <div class="child-container" style="height: 20vh; margin-top: 20px; width: 100%">
+    <p><i>Mouse over the following lines to see fixed highlights</i></p>
+
+    <p [appHighlightColor]="'yellow'">Highlighted in yellow</p>
+    <p appHighlightColor="orange">Highlighted in orange</p>
+  </div>
+</div>

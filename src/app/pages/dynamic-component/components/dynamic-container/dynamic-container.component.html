@@ -1,0 +1,10 @@
+<h2>Dynamic Components in Angular</h2>
+
+<ul>
+  <li (click)="createComponent(componentNames.componentX)">Component X</li>
+  <li (click)="createComponent(componentNames.componentY)">Component Y</li>
+</ul>
+
+<div class="display black-border">
+  <ng-container #container></ng-container>
+</div>

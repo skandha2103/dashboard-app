@@ -1,0 +1,42 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form action="" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+          <div class="form-group my-3">
+            <label for="">Name</label>
+            <input type="text" formControlName="name" class="form-control" />
+            <span
+              *ngIf="
+                signUpForm.get('name')?.touched &&
+                !signUpForm.get('name')?.valid
+              "
+            >
+              Please enter name
+            </span>
+          </div>
+          <div class="form-group my-3">
+            <label for="">Email</label>
+            <input type="text" formControlName="email" class="form-control" />
+            <div *ngIf="emailError">{{ emailError }}</div>
+          </div>
+          <div class="form-group my-3" formArrayName="hobbies">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="onAddHobby()"
+            >
+              Add Hobby
+            </button>
+            <div *ngFor="let hobby of hobbiesControl.controls; let i = index">
+              <input type="text" [formControlName]="i" class="form-control" style="margin-top:10px"/>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

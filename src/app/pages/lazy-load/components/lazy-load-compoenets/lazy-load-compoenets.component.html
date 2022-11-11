@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="btn-container">
+        <div class="section">
+            <button class="btn btn-dark" (click)="loadTest1()">Load Component Test1</button>
+            <button class="btn btn-dark" (click)="loadTest2()">Load Component Test2</button>
+        </div>
+    </div>
+    <div class="text-container">
+        <div class="section">
+            <ng-container #container></ng-container>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:50px">
+    <app-noroute-lazymodule></app-noroute-lazymodule>
+</div>

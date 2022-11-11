@@ -1,0 +1,42 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Sno.</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of userData; index as i" (click)="onUserSelect(user)">
+        <td>{{ user.id }}</td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>
+          <button class="btn btn-primary" *ngIf="!user.following">Follow</button>
+          <button class="btn btn-danger" *ngIf="user.following">Unfollow</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <div>
+  <h3>Following Users</h3>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Sno.</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of followingUserData; index as i">
+        <td>{{ user.id }}</td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+    </tr>
+  </tbody>
+</table> -->

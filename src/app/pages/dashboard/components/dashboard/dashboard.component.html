@@ -1,0 +1,14 @@
+<mat-drawer-container>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <div
+      class="container-fluid"
+      [ngClass]="{ fullWidth: !sideBarOpen, fixedWidth: sideBarOpen }"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,20 @@
+.header {
+    // width: 100vw;
+    height: 80px;
+    // background-color: #F4ABC4;
+    // background-color: #1976d2;
+    background-color: #1e293b;
+    // color: #333456;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .nav-item {
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        color: pink;
+      }
+    }
+  }
